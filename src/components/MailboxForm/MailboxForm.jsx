@@ -2,8 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const initialState = {
-    Name: '',
-    Size: '',
+    boxOwner: '',
+    boxSize: '',
 };
 
 const MailboxForm = ({ addBox }) => {
@@ -17,7 +17,7 @@ const handleChange = ({ target }) => {
 const handleSubmit = (evt) => {
   evt.preventDefault();
   addBox(formData);
-setFormData(inititalState);
+setFormData(initialState);
   navigate("/mailboxes");
 };
 
@@ -54,4 +54,4 @@ return (
 };
 
 
-export default MailboxForm 
+export default MailboxForm;
